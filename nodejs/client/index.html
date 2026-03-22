@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת תיאום מתנדבים - RoadKind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛣️</text></svg>">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <span class="logo-emoji">🛣️</span>
+            <h1>RoadKind</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="filterCard" class="filter-section shadow-sm">
+            <h5 class="filter-title" style="margin-bottom: 15px; font-weight: bold;">חיפוש וסינון קריאות</h5>
+            <div class="filter-row" style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-end;">
+                <div class="filter-group">
+                    <label for="filterArea" style="display:block; font-size: 0.8rem; color: #666;">אזור בארץ:</label>
+                    <select id="filterArea" class="form-select">
+                        <option value="">כל האזורים</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterStatus" style="display:block; font-size: 0.8rem; color: #666;">סטטוס
+                        קריאה:</label>
+                    <select id="filterStatus" class="form-select">
+                        <option value="">כל הסטטוסים</option>
+                        <option value="ממתין">ממתין</option>
+                        <option value="בטיפול">בטיפול</option>
+                        <option value="הסתיים">הסתיים</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterPriority" style="display:block; font-size: 0.8rem; color: #666;">רמת
+                        דחיפות:</label>
+                    <select id="filterPriority" class="form-select">
+                        <option value="">כל הרמות</option>
+                        <option value="1">נמוכה</option>
+                        <option value="2">בינונית</option>
+                        <option value="3">גבוהה</option>
+                        <option value="4">קריטית</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button class="btn btn-primary" onclick="loadRequests()" style="height: 48px; padding: 0 30px;">סנן
+                        תוצאות</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="requestsList" class="requests-grid"></div>
+    </div>
+
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h3>פרטי בקשת עזרה</h3>
+            </div>
+            <div id="modalBody" class="modal-body"></div>
+            <div id="modalFooter" class="modal-footer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

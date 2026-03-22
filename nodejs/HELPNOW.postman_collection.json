@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "ebb051dc-1fc9-4cc6-aad2-6a04a109ceba",
+		"name": "HELPNOW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49987117",
+		"_collection_link": "https://shifra54060-4510357.postman.co/workspace/shifra54060's-Workspace~b01e9f52-754b-4cfd-8057-bdf585d128a3/collection/49987117-ebb051dc-1fc9-4cc6-aad2-6a04a109ceba?action=share&source=collection_link&creator=49987117"
+	},
+	"item": [
+		{
+			"name": "get requests with filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/requests?status=בטיפול&location.areaCode=102&priority=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"requests"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "בטיפול"
+						},
+						{
+							"key": "location.areaCode",
+							"value": "102"
+						},
+						{
+							"key": "priority",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll areas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/areas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"areas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get request by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "assign volunteer to request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"volunteerCode\": \"V103\",\r\n    \"status\": \"הסתיים\"\r\n\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/requests/69694ec973ff88ba4cc6c9f5/assign",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"requests",
+						"69694ec973ff88ba4cc6c9f5",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all volunteers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/volunteers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"volunteers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adding a volunteer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n   \r\n \r\n    \"firstName\": \"ירון\",\r\n    \"lastName\": \"זיו'\",\r\n    \"phone\": \"0576754060\",\r\n    \"specialties\": [\"חילוץ רכבי שטח\",\"עזרה ראשונה\"]\r\n   \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/volunteers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"volunteers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

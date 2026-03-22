@@ -1,0 +1,46 @@
+use HELPNOW
+
+db.volunteers.insertMany([
+  {
+    "volunteerCode": "V101",
+    "firstName": "אברהם",
+    "lastName": "לוי",
+    "phone": "050-1112233",
+    "specialties": ["החלפת גלגל", "הנעת רכב", "כיוון פרונט"]
+  },
+  {
+    "volunteerCode": "V102",
+    "firstName": "משה",
+    "lastName": "כהן",
+    "phone": "054-4445566",
+    "specialties": ["פתיחת רכב נעול", "חילוץ מעלית", "פריצת מנעולים"]
+  },
+  {
+    "volunteerCode": "V103",
+    "firstName": "איתן",
+    "lastName": "קרמר",
+    "phone": "054-5678560",
+    "specialties": ["חילוץ שטח 4X4", "גרירת רכב", "ניתוק קודן"]
+  },
+  {
+    "volunteerCode": "V104",
+    "firstName": "דניאל",
+    "lastName": "גלבוע",
+    "phone": "052-1239876",
+    "specialties": ["אספקת דלק", "שאיבת דלק שגוי", "בדיקת שמן מים"]
+  },
+  {
+    "volunteerCode": "V105",
+    "firstName": "רמי",
+    "lastName": "לינור",
+    "phone": "050-5678090",
+    "specialties": ["תיקון פנצ'ר בשטח", "החלפת מצבר", "תאורת דרך"]
+  },
+  {
+    "volunteerCode": "V106",
+    "firstName": "יהודה",
+    "lastName": "אריאלי",
+    "phone": "053-9988776",
+    "specialties": ["חילוץ מבוץ", "חילוץ מחול", "הנעת משאיות (24V)"]
+  }
+])

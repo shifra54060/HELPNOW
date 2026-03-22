@@ -1,0 +1,80 @@
+db.helpRequests.insertMany([
+  {
+    requestId: 1,
+    location: {
+      areaCode: 102,
+      name: "בני ברק, רחוב חזון איש 22"
+    },
+    problemDescription: "זקוק לעזרה דחופה בהחלפת גלגל",
+    contactPhone: "052-1234567",
+    status: "ממתין",
+    peopleStuck: 2,
+    priority:2,
+    volunteerCode: null
+  },
+  {
+    requestId: 2,
+    location: {
+      areaCode: 102,
+      name: "כביש 1, מחלף ענבה"
+    },
+    problemDescription: "רכב תקוע ללא דלק",
+    contactPhone: "058-9876543",
+    status: "בטיפול",
+    peopleStuck: 4,
+    priority:3,
+    volunteerCode: "V104"
+  },
+  {
+    requestId: 3,
+    location: {
+      areaCode: 105,
+      name: "ירושלים, חניון ארזים, קומה 2"
+    },
+    problemDescription: "צריך עזרה לפתוח דלת רכב שנטרקה עם המפתחות בפנים",
+    contactPhone: "050-1111111",
+    status: "ממתין",
+    peopleStuck: 1,
+    priority:1,
+    volunteerCode: null
+  },
+  {
+    requestId: 4,
+    location: {
+      areaCode: 102,
+      name: "יער בן שמן – שביל הראשי"
+    },
+    problemDescription: "אמבולנס תקוע בבוץ, דרוש חילוץ מיידי על ידי מתנדב עם ציוד מתאים",
+    contactPhone: "0560987778",
+    status: "ממתין",
+    peopleStuck: 5,
+    priority:4,
+    volunteerCode: null
+  },
+  {
+    requestId: 5,
+    location: {
+      locationCode: 102,
+      name: "תל אביב – רמת החייל ליד הסופר"
+    },
+    problemDescription: "ילד נשכח ברכב",
+    contactPhone: "0567643455",
+    status: "ממתין",
+    peopleStuck: 1,
+    priority:4,
+    volunteerCode: null
+  },
+  {
+    requestId: 6,
+    location: {
+      areaCode: 105,
+      name: "רמות א, בובליק 9, ירושלים"
+    },
+    problemDescription: "מעלית תקועה",
+    contactPhone: "0556543345",
+    status: "ממתין",
+    peopleStuck: 5,
+    priority:3,
+    volunteerCode: null
+  }
+])

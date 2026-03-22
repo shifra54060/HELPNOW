@@ -1,0 +1,26 @@
+db.area.insertMany([
+{
+      areaCode: 101,
+	  name:"צפון"
+
+},
+{
+      areaCode: 102,
+	  name:"מרכז"
+
+},
+{
+      areaCode: 103,
+	  name:"דרום"
+
+},
+{
+      areaCode: 104,
+	  name:"אזור חיפה"
+
+},
+{      areaCode: 105,
+	  name:"אזור ירושלים"
+}
+    
+])
